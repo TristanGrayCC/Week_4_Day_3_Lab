@@ -4,8 +4,11 @@ require( 'pry-byebug' )
 require_relative( './models/house' )
 require_relative( './models/student' )
 
-  get '/students' do
+  get '/hogwarts' do
+    erb(:hogwarts)
+  end
 
+  get '/students' do
   @students = Student.all()
   erb(:student_index)
   end
@@ -19,3 +22,15 @@ require_relative( './models/student' )
     @student.save()
     erb(:create)
   end
+
+  post '/students/:id/delete' do
+    @student = Student.find(params[:id])
+    @student.delete()
+    redirect to '/students'
+  end
+
+  get '/houses' do
+  @houses = House.all()
+  erb(:house_index)
+  end
+

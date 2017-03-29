@@ -27,6 +27,11 @@ class Student
     return house.first()
   end
 
+  def delete
+    sql = "DELETE FROM students WHERE id = #{@id}"
+    SqlRunner.run(sql)
+  end
+
   def self.all()
     sql = "SELECT * FROM students"
     return Student.map_items(sql)
