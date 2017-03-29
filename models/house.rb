@@ -16,4 +16,10 @@ class House
     house = SqlRunner.run(sql)
     @id = house.first()['id'].to_i 
   end
+
+  def self.map_items(sql)
+    houses = SqlRunner.run(sql)
+    result = houses.map { |house| House.new(house)}
+    return result
+  end
 end
