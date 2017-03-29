@@ -12,7 +12,20 @@ form {
 }
 
 nav {
- margin: 50px;
+  float: left;
+  position: relative;
+  left:50%;
+ text-align: center;
+}
+
+nav ul{
+  float: left;
+  position: relative;
+  left:-50%;
+}
+
+nav a {
+ padding: 0 30px;
 }
 
 label {
@@ -58,4 +71,14 @@ li a:hover {
 active a {
  font-weight: bold;
  color: #333;
+}
+
+.student_page {
+  display: inline;
+  position: absolute;
+  top: 100px;
+  right: 50px;
+}
+.student {
+  display: inline-block;
 }

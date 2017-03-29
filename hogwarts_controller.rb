@@ -26,7 +26,7 @@ require_relative( './models/student' )
   post '/students/:id/delete' do
     @student = Student.find(params[:id])
     @student.delete()
-    redirect to '/students'
+    redirect to '/hogwarts'
   end
 
   get '/houses' do

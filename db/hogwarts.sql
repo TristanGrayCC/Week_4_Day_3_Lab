@@ -4,7 +4,8 @@ DROP TABLE houses;
 CREATE TABLE houses(
   id serial2 PRIMARY KEY,
   name Varchar(255),
-  url Varchar(255)
+  url Varchar(255),
+  bio text
   );
 
 CREATE TABLE students(
