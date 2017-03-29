@@ -12,6 +12,6 @@ CREATE TABLE students(
   first_name Varchar(255),
   last_name Varchar(255),
   age INT2,
-  house INT2 REFERENCES houses(id)
+  house_id INT2 REFERENCES houses(id)
   );
 
